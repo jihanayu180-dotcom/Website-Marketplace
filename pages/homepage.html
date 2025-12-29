@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/css/stylehome.css">
+
+    <title>Cute Store</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/logo.png" alt="" width="50" height="50" class="me-2">
+      Cute <strong>Store<strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <form class="d-flex ms-auto">
+      <input class="form-control me-2" type="search" placeholder="Cari Barang Anda!" aria-label="Cari">
+      <button class="btn btn-light" type="submit">Cari</button>
+    </form>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="homepage.html">Beranda</a>
+        </li>
+        <!-- Tombol Notifikasi -->
+<li class="nav-item">
+  <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#notifModal">
+    Notifikasi
+  </a>
+</li>
+
+<!-- Modal Notifikasi -->
+<div class="modal fade" id="notifModal" tabindex="-1" aria-labelledby="notifModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="notifModalLabel">Notifikasi</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Isi Notifikasi -->
+        <div class="list-group">
+          <a href="#" class="list-group-item list-group-item-action">
+            📦 Pesanan kamu sedang dikemas
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            🚚 Pesanan kamu dalam perjalanan
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            💬 Penjual membalas pertanyaan kamu
+          </a>
+          <a href="#" class="list-group-item list-group-item-action">
+            🔔 Promo spesial 11.11 hanya hari ini!
+          </a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <li class="nav-item">
+          <a class="nav-link" href="keranjang.html">Keranjang</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Daftar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Masuk</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div class="container">
+<div id="carouselExampleControls" class="carousel slide mt-5" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="../assets/image1.png" class="d-block" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/image2.png" class="d-block" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/image3.png" class="d-block" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/image4.png" class="d-block" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="../assets/image5.png" class="d-block" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<div>
+  <!-- Carousel -->
+
+
+  <!-- Kategori -->
+<div class="container mt-5">
+  <div class="judul-kategori" style="background-color: #FFF; padding: 5px 10 px;">
+    <h5 class="text-center" style="margin-top: 5px;">KATEGORI</h5>
+
+  </div>
+  <div class="row text-center row-container mt-2">
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/aksesorisfashion.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Aksesoris Fashion</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/elektronik.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Elektronik</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/handphone&aksesoris.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Handphone & Aksesoris</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/hobi&koleksi.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Hobi & Koleksi</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/jamtangan.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Jam Tangan</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/kesehatan.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Kesehatan</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/komputer&aksesoris.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Komputer & Aksesoris</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/olahraga&outdoor.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Olahraga & Outdoor</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/pakaianpria.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Pakaian Pria</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/sepatupria.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Sepatu Pria</p>
+      </div>
+    </div>
+
+    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+      <div class="menu-kategori">
+        <a href="#"><img src="../assets/kategori/souvenir&perlengkapanpesta.png" class="img-categori mt-3"></a>
+        <p class="mt-2">Souvenir & Perlengkapan Pesta</p>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Kategori -->
+
+
+  <!-- Produk -->
+    <div class="container mt-5">
+      <div class="judul-kategori" style="background-color: #FFF; padding: 5px 10 px;">
+    <h5 class="text-center" style="margin-top: 5px;">PRODUK</h5>
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+          <img src="../assets/produk/elektronik/image1.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-title">GM Bear Panci Listrik Serbaguna</h6>
+            <p class="card-text">Rp 89.990</p>
+            <a href="singleproduct.html" class="btn btn-dark d-grid">Beli</a>
+          </div>
+         </div> 
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+          <img src="../assets/produk/elektronik/image2.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-title">ANQI SHOP Chopper Blender</h6>
+            <p class="card-text">Rp 68.999</p>
+            <a href="#" class="btn btn-dark d-grid">Beli</a>
+          </div>
+         </div> 
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+          <img src="../assets/produk/elektronik/image3.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-title">Lampu Emergency Magic Lampu</h6>
+            <p class="card-text">Rp 19.949 - Rp43.982</p>
+            <a href="#" class="btn btn-dark d-grid">Beli</a>
+          </div>
+         </div> 
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+          <img src="../assets/produk/elektronik/image4.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-title">Stop kontak 2 3 4 5 Lubang Panjang 1,5M 3M 5M 10M</h6>
+            <p class="card-text">Rp 33.900</p>
+            <a href="#" class="btn btn-dark d-grid">Beli</a>
+          </div>
+         </div> 
+        </div>
+
+        <div class="col-lg-2 col-md-2 col-sm-4 col-6 mt-2">
+          <div class="card text-center">
+          <img src="../assets/produk/elektronik/image5.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-title">100% Original Lampu Meja LED</h6>
+            <p class="card-text">Rp 12.670 - Rp32.999</p>
+            <a href="#" class="btn btn-dark d-grid">Beli</a>
+          </div>
+         </div> 
+        </div>
+      </div>
+    </div>
+
+  <!-- Produk -->
+
+  <!-- Footer -->
+  <footer class="bg-light p-5 mt-5">
+    <div class="container">
+      <div class="row">
+       <div class="col">
+        <a href="" class="text-decoration-none">
+          <img src="../assets/logo.png" style="width: 30px;">
+        </a>
+        <span>Copyright @2025 |  Created and Developed by <a href="https://www.instagram.com/aaassriii?igsh=a2Q0MHQwcmJ2aDdq" class="text-decoration-none text-dark fw-bold">Asri</a></span> <a href="https://www.instagram.com/jihannaay?igsh=amhpODFpaWE4Nnh6" class="text-decoration-none text-dark fw-bold">Jihan</a></span>
+       </div>
+
+  <!-- pembayaran -->
+     
+<div class="d-flex flex-column align-items-end mt-2 pe-2">
+  <h6 class="fw-bold mb-2" style="margin-right: 290px;">Pembayaran</h6>
+  <div>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/alfamart.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/alfamidi.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/bca.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/bni.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/bri.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/bsi.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/indomaret.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/mandiri.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/seabank.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/visa.png" class="ms-2" style="width: 30px;">
+    </a>
+  </div>
+</div>
+
+    <!-- pembayaran -->
+
+    
+    <!-- pengiriman -->
+<div class="d-flex flex-column align-items-end mt-2 pe-2">
+  <h6 class="fw-bold mb-2" style="margin-right: 300px;">Pengiriman</h6>
+  <div>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/gosend.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/j&t.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/jne.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/ninja.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/si cepat.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/spx.png" class="ms-2" style="width: 30px;">
+    </a>
+  </div>
+</div>
+<!-- pengiriman -->
+
+<!-- ikuti sosial media -->
+<div class="d-flex flex-column align-items-end mt-2 pe-2">
+  <h6 class="fw-bold mb-2" style="margin-right: 310px;">Ikuti Kami</h6>
+  <div>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/social/faceboook.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/social/instagram.jpg" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/social/linkedin.jpeg" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/social/twitter.png" class="ms-2" style="width: 30px;">
+    </a>
+  </div>
+</div>
+<!-- ikuti sosial media -->
+
+       </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+ crossorigin="anonymous"></script>
+
+  </body>
+</html>

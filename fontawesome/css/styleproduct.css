@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+	background-color: #EAEAEA;
+	font-family: 'Poppins' , sans-serif;
+	font-size: 14px;  
+	color: #2D2D2D;
+}
+.form-control{
+	width: 350px;
+}
+
+.img-categori{
+	width: 70px;
+}
+.img-categori:hover{
+	transform: scale(1.2);
+}
+.row-container{
+	background-color: #FFF;
+	 margin: 0px;
+}
+.card:hover{
+	border: 2px solid #2d2d2d;
+}
+.row-product{
+	background-color: #fff;
+	margin: 0;
+	padding: 5px;
+	padding-top: 16px;
+}
+.garis-product{
+	border-bottom: 2px solid #2d2d2d;
+	margin-top: 10px;
+	margin-bottom: 25px;
+}
+.ulasan-img{
+	width: 50px;
+}
+.ulasan-nama{
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+.ulasan-des{
+	font-size: 14px;
+}
+.deskripsi{
+	height: 250px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+.ulasan{
+	height: 250px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+.modal-content {
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid #eee;
+}
+
+.list-group-item:hover {
+  background-color: #f8f9fa;
+}

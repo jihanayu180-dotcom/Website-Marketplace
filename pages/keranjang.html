@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.min">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/css/keranjang.css">
+
+
+    <title>Cute Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="../assets/logo.png" alt="" width="50" height="50" class="me-2">
+      Cute <strong>Store<strong>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <form class="d-flex ms-auto">
+      <input class="form-control me-2" type="search" placeholder="Cari Barang Anda!" aria-label="Cari">
+      <button class="btn btn-light" type="submit">Cari</button>
+    </form>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="homepage.html">Beranda</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Notifikasi</a>
+        </li>
+        <li class="nav-item">
+         <a class="nav-link" href="keranjang.html">
+          Keranjang <span id="cart-count" class="cart-badge">0</span>
+         </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html">Daftar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Masuk</a>
+        </li> 
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="container">
+  <nav aria-label="breadcrumb" style="background-color: #fff" class="mt-3"> 
+  <ol class="breadcrumb p-3">
+    <li class="breadcrumb-item"><a href="#" class="text-decoration-none">Beranda</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Keranjang</li>
+  </ol>
+</nav>
+</div>
+<!-- Breadcrumb -->
+
+
+
+<!-- Keranjang -->
+<div class="container mt-4">
+  <div class="row row-product">
+    <div class="col">
+
+      <!-- PILIH SEMUA + HAPUS -->
+      <div class="d-flex justify-content-between mb-2">
+        <div>
+          <input type="checkbox" id="select-all"> Pilih Semua
+        </div>
+
+        <button class="btn btn-danger btn-sm" id="delete-selected">
+          Hapus yang dipilih
+        </button>
+      </div>
+
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th><input type="checkbox" id="select-all-header"></th>
+            <th class="fw-normal">Produk</th>
+            <th class="fw-normal">Gambar</th>
+            <th class="fw-normal">Harga</th>
+            <th class="fw-normal">Jumlah</th>
+            <th class="fw-normal">Sub Total</th>
+            <th class="fw-normal">Aksi</th>
+          </tr>
+        </thead>
+
+        <tbody id="cart-body">
+
+          <!-- PRODUK 1 -->
+          <tr>
+            <td><input type="checkbox" class="select-item"></td>
+
+            <td>GM Bear Panci Listrik</td>
+
+            <td><img src="../assets/produk/elektronik/image1.png" width="70"></td>
+
+            <td class="price" data-price="89990">Rp 89.990</td>
+
+            <td>
+              <div class="d-flex align-items-center">
+                <button class="btn btn-sm btn-dark minus">−</button>
+                <span class="mx-2 qty">1</span>
+                <button class="btn btn-sm btn-dark plus">+</button>
+              </div>
+            </td>
+
+            <td class="subtotal">Rp 89.990</td>
+
+            <td><i class="fa-solid fa-trash-can text-danger delete-btn"></i></td>
+          </tr>
+
+          <!-- PRODUK 2 -->
+          <tr>
+            <td><input type="checkbox" class="select-item"></td>
+
+            <td>Kupluk Rajut Korea</td>
+
+            <td><img src="../assets/produk/elektronik/image1.png" width="70"></td>
+
+            <td class="price" data-price="29990">Rp 29.990</td>
+
+            <td>
+              <div class="d-flex align-items-center">
+                <button class="btn btn-sm btn-dark minus">−</button>
+                <span class="mx-2 qty">1</span>
+                <button class="btn btn-sm btn-dark plus">+</button>
+              </div>
+            </td>
+
+            <td class="subtotal">Rp 29.990</td>
+
+            <td><i class="fa-solid fa-trash-can text-danger delete-btn"></i></td>
+          </tr>
+
+          <!-- PRODUK 3 -->
+          <tr>
+            <td><input type="checkbox" class="select-item"></td>
+
+            <td>Botol Minum Aesthetic</td>
+
+            <td><img src="../assets/produk/elektronik/image1.png" width="70"></td>
+
+            <td class="price" data-price="19990">Rp 19.990</td>
+
+            <td>
+              <div class="d-flex align-items-center">
+                <button class="btn btn-sm btn-dark minus">−</button>
+                <span class="mx-2 qty">1</span>
+                <button class="btn btn-sm btn-dark plus">+</button>
+              </div>
+            </td>
+
+            <td class="subtotal">Rp 19.990</td>
+
+            <td><i class="fa-solid fa-trash-can text-danger delete-btn"></i></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+<!-- TOTAL & CHECKOUT -->
+<div class="card p-3 mt-3">
+  <div class="d-flex justify-content-between align-items-center">
+    <div>
+      Dipilih: <span id="selected-count">0</span>
+    <br>
+      Total Harga: <strong id="selected-total">Rp 0</strong>
+     </div>
+     <button class="btn btn-warning" id="checkout-btn">Checkout</button>
+     </div>
+     </div>
+    </div>
+  </div>
+</div>
+<!-- TOTAL & CHECKOUT -->
+
+<!-- Keranjang -->
+
+
+
+<!-- SCRIPT FUNGSI KERANJANG -->
+<script>
+  function updateRow(row) {
+    const qty = row.querySelector(".qty");
+    const subtotal = row.querySelector(".subtotal");
+    const price = parseInt(row.querySelector(".price").dataset.price);
+    const jumlah = parseInt(qty.textContent);
+
+    subtotal.textContent = "Rp " + (jumlah * price).toLocaleString();
+  }
+
+  document.querySelectorAll("tbody tr").forEach(row => {
+    const minus = row.querySelector(".minus");
+    const plus = row.querySelector(".plus");
+    const qty = row.querySelector(".qty");
+    const deleteBtn = row.querySelector(".delete-btn");
+
+    let jumlah = 1;
+
+    minus.addEventListener("click", () => {
+      if (jumlah > 1) {
+        jumlah--;
+        qty.textContent = jumlah;
+        updateRow(row);
+      }
+    });
+
+    plus.addEventListener("click", () => {
+      jumlah++;
+      qty.textContent = jumlah;
+      updateRow(row);
+    });
+
+    deleteBtn.addEventListener("click", () => {
+      row.remove();
+    });
+  });
+
+  // PILIH SEMUA
+  const selectAll = document.getElementById("select-all");
+  const selectHeader = document.getElementById("select-all-header");
+  const deleteSelected = document.getElementById("delete-selected");
+
+  function toggleAll(checked) {
+    document.querySelectorAll(".select-item").forEach(cb => cb.checked = checked);
+    selectHeader.checked = checked;
+    selectAll.checked = checked;
+  }
+
+  selectAll.addEventListener("change", e => toggleAll(e.target.checked));
+  selectHeader.addEventListener("change", e => toggleAll(e.target.checked));
+
+  // HAPUS YANG DIPILIH
+  deleteSelected.addEventListener("click", () => {
+    document.querySelectorAll(".select-item:checked").forEach(cb => {
+      cb.closest("tr").remove();
+    });
+  });
+</script>
+s
+
+<!-- SCRIPT HITUNG JUMLAH -->
+<script>
+  document.querySelectorAll("tr").forEach(row => {
+    const minus = row.querySelector(".minus");
+    const plus = row.querySelector(".plus");
+    const qty = row.querySelector(".qty");
+    const price = row.querySelector(".price");
+    const subtotal = row.querySelector(".subtotal");
+    const deleteBtn = row.querySelector(".delete-btn");
+
+    if (!minus || !plus) return;
+
+    let jumlah = 1;
+    let harga = parseInt(price.getAttribute("data-price"));
+
+    function updateSubtotal() {
+      subtotal.textContent = "Rp " + (jumlah * harga).toLocaleString();
+    }
+
+    minus.addEventListener("click", () => {
+      if (jumlah > 1) {
+        jumlah--;
+        qty.textContent = jumlah;
+        updateSubtotal();
+      }
+    });
+
+    plus.addEventListener("click", () => {
+      jumlah++;
+      qty.textContent = jumlah;
+      updateSubtotal();
+    });
+
+    deleteBtn.addEventListener("click", () => {
+      row.remove();
+    });
+  });
+</script>
+
+
+  <!-- Footer -->
+  <footer class="bg-light p-5 mt-5">
+    <div class="container">
+      <div class="row">
+       <div class="col">
+        <a href="" class="text-decoration-none">
+          <img src="../assets/logo.png" style="width: 30px;">
+        </a>
+        <span>Copyright @2025 |  Created and Developed by <a href="https://www.instagram.com/aaassriii?igsh=a2Q0MHQwcmJ2aDdq" class="text-decoration-none text-dark fw-bold">Asri</a></span> <a href="https://www.instagram.com/jihannaay?igsh=amhpODFpaWE4Nnh6" class="text-decoration-none text-dark fw-bold">Jihan</a></span>
+       </div>
+
+  <!-- pembayaran -->
+     
+<div class="d-flex flex-column align-items-end mt-2 pe-2">
+  <h6 class="fw-bold mb-2" style="margin-right: 290px;">Pembayaran</h6>
+  <div>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/alfamart.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/alfamidi.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/bca.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/bni.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/bri.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/bsi.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/indomaret.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/mandiri.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/seabank.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pembayaran/visa.png" class="ms-2" style="width: 30px;">
+    </a>
+  </div>
+</div>
+
+    <!-- pembayaran -->
+
+    
+    <!-- pengiriman -->
+<div class="d-flex flex-column align-items-end mt-2 pe-2">
+  <h6 class="fw-bold mb-2" style="margin-right: 300px;">Pengiriman</h6>
+  <div>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/gosend.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/j&t.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/jne.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/ninja.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/si cepat.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/pengiriman/spx.png" class="ms-2" style="width: 30px;">
+    </a>
+  </div>
+</div>
+<!-- pengiriman -->
+
+<!-- ikuti sosial media -->
+<div class="d-flex flex-column align-items-end mt-2 pe-2">
+  <h6 class="fw-bold mb-2" style="margin-right: 310px;">Ikuti Kami</h6>
+  <div>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/social/faceboook.png" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/social/instagram.jpg" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/social/linkedin.jpeg" class="ms-2" style="width: 30px;">
+    </a>
+    <a href="#" class="text-decoration-none">
+      <img src="../assets/sosialmedia/social/twitter.png" class="ms-2" style="width: 30px;">
+    </a>
+  </div>
+</div>
+<!-- ikuti sosial media -->
+
+       </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+    <script>
+function updateTotals() {
+  let selectedCount = 0;
+  let selectedTotal = 0;
+  let cartCount = 0;
+
+  document.querySelectorAll("#cart-body tr").forEach(row => {
+    const qty = parseInt(row.querySelector(".qty")?.textContent || 0);
+    const price = parseInt(row.querySelector(".price")?.dataset.price || 0);
+    const checkbox = row.querySelector(".select-item");
+
+    // Hitung total semua barang di keranjang
+    cartCount++;
+
+    // Hitung total yg dicentang
+    if (checkbox && checkbox.checked) {
+      selectedCount++;
+      selectedTotal += qty * price;
+    }
+  });
+
+  // Update teks
+  document.getElementById("selected-count").textContent = selectedCount;
+  document.getElementById("selected-total").textContent = "Rp " + selectedTotal.toLocaleString();
+  document.getElementById("cart-count").textContent = cartCount;
+}
+
+
+// ================================
+// EVENT: CEKLIS PRODUK
+// ================================
+document.querySelectorAll(".select-item").forEach(cb => {
+  cb.addEventListener("change", () => {
+    updateTotals();
+  });
+});
+
+// ================================
+// EVENT: HAPUS PRODUK
+// ================================
+document.querySelectorAll(".delete-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    this.closest("tr").remove();
+    updateTotals();
+  });
+});
+
+// ================================
+// EVENT: PLUS/MINUS QTY
+// ================================
+document.querySelectorAll("tr").forEach(row => {
+  const minus = row.querySelector(".minus");
+  const plus = row.querySelector(".plus");
+  const qtyDisplay = row.querySelector(".qty");
+  const price = parseInt(row.querySelector(".price")?.dataset.price || 0);
+  const subtotal = row.querySelector(".subtotal");
+
+  if (!minus || !plus) return;
+
+  let qty = parseInt(qtyDisplay.textContent);
+
+  function updateSubtotal() {
+    subtotal.textContent = "Rp " + (qty * price).toLocaleString();
+    updateTotals();
+  }
+
+  minus.addEventListener("click", () => {
+    if (qty > 1) {
+      qty--;
+      qtyDisplay.textContent = qty;
+      updateSubtotal();
+    }
+  });
+
+  plus.addEventListener("click", () => {
+    qty++;
+    qtyDisplay.textContent = qty;
+    updateSubtotal();
+  });
+});
+
+// ================================
+// PILIH SEMUA
+// ================================
+document.getElementById("select-all").addEventListener("change", function () {
+  document.querySelectorAll(".select-item").forEach(cb => cb.checked = this.checked);
+  document.getElementById("select-all-header").checked = this.checked;
+  updateTotals();
+});
+
+document.getElementById("select-all-header").addEventListener("change", function () {
+  document.querySelectorAll(".select-item").forEach(cb => cb.checked = this.checked);
+  document.getElementById("select-all").checked = this.checked;
+  updateTotals();
+});
+
+// ================================
+// CHECKOUT
+// ================================
+document.getElementById("checkout-btn").addEventListener("click", () => {
+  const total = document.getElementById("selected-total").textContent;
+
+  if (total === "Rp 0") {
+    alert("Pilih barang dulu sebelum checkout!");
+  } else {
+    alert("Checkout berhasil!\nTotal yang dibayar: " + total);
+  }
+});
+
+// Jalankan pertama kali
+updateTotals();
+</script>
+
+<script>
+function updateCartCount() {
+  const rows = document.querySelectorAll("#cart-body tr");
+  document.getElementById("cart-count").textContent = rows.length;
+}
+
+// Saat menghapus produk
+document.querySelectorAll(".delete-btn").forEach(btn => {
+  btn.addEventListener("click", function () {
+    this.closest("tr").remove();
+    updateCartCount();
+  });
+});
+
+// Saat menghapus produk yang dicentang
+document.getElementById("delete-selected").addEventListener("click", () => {
+  document.querySelectorAll(".select-item:checked").forEach(cb => {
+    cb.closest("tr").remove();
+  });
+  updateCartCount();
+});
+
+// Jalankan pertama kali saat halaman dibuka
+updateCartCount();
+</script>
+s
+
+<script>
+
+// ✅ Fungsi menyimpan keranjang ke localStorage
+function saveCart() {
+    let cart = [];
+
+    document.querySelectorAll("#cart-body tr").forEach(row => {
+        cart.push({
+            name: row.querySelector("td:nth-child(2)").textContent.trim(),
+            image: row.querySelector("img").getAttribute("src"),
+            price: row.querySelector(".price").dataset.price,
+            qty: row.querySelector(".qty").textContent.trim()
+        });
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+
+// ✅ Tombol hapus satu produk
+document.querySelectorAll(".delete-btn").forEach(btn => {
+    btn.addEventListener("click", function () {
+        this.closest("tr").remove();
+        saveCart(); // ✅ ditambahkan di sini
+    });
+});
+
+
+// ✅ Tombol MINUS
+document.querySelectorAll(".btn-minus").forEach(btn => {
+    btn.addEventListener("click", function () {
+        let qty = this.parentElement.querySelector(".qty");
+        let jumlah = parseInt(qty.textContent);
+
+        if (jumlah > 1) {
+            qty.textContent = jumlah - 1;
+            saveCart(); // ✅ ditambahkan di sini
+        }
+    });
+});
+
+
+// ✅ Tombol PLUS
+document.querySelectorAll(".btn-plus").forEach(btn => {
+    btn.addEventListener("click", function () {
+        let qty = this.parentElement.querySelector(".qty");
+        let jumlah = parseInt(qty.textContent);
+
+        qty.textContent = jumlah + 1;
+        saveCart(); // ✅ ditambahkan di sini
+    });
+});
+
+
+// ✅ Tombol "Hapus yang dipilih"
+document.getElementById("delete-selected").addEventListener("click", () => {
+    document.querySelectorAll(".select-item:checked").forEach(cb => {
+        cb.closest("tr").remove();
+    });
+    saveCart(); // ✅ ditambahkan di sini
+});
+
+</script>
+
+
+  </body>
+</html>
